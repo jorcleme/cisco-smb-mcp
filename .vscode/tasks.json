@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build MCP Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "group": "build",
+      "problemMatcher": ["$tsc"],
+      "isBackground": false
+    },
+    {
+      "label": "Start MCP Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["start"],
+      "group": "build",
+      "isBackground": true
+    },
+    {
+      "label": "Run MCP Server (Dev)",
+      "type": "shell",
+      "command": "npx",
+      "args": ["tsx", "src/server/server.ts"],
+      "group": "build",
+      "isBackground": true
+    },
+    {
+      "label": "Test MCP Server",
+      "type": "shell",
+      "command": "npx",
+      "args": ["tsx", "src/client/simple-client.ts"],
+      "group": "test",
+      "isBackground": false,
+      "dependsOn": "Build MCP Server"
+    }
+  ]
+}

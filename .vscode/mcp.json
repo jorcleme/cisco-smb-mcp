@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "document-prompt-server": {
+      "type": "stdio",
+      "command": "tsx",
+      "args": ["src/server/server.ts"]
+    }
+  }
+}
