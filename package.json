@@ -1,0 +1,34 @@
+{
+  "name": "cisco-smb-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Cisco SMB documentation and resources",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:server": "tsc -p server/tsconfig.json",
+    "build:client": "tsc -p client/tsconfig.json",
+    "build": "npm run build:server && npm run build:client",
+    "start:server": "node server/dist/index.js",
+    "dev:server": "tsc -p server/tsconfig.json --watch",
+    "inspector": "npx @modelcontextprotocol/inspector node server/dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "cisco",
+    "smb",
+    "documentation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "uuid": "^13.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

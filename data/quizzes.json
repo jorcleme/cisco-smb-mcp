@@ -1,0 +1,192 @@
+[
+  {
+    "id": "vlan-basics-quiz",
+    "title": "VLAN Configuration Basics Quiz",
+    "description": "Test your knowledge of VLAN configuration on Cisco Business switches",
+    "category": "Configuration",
+    "difficulty": "beginner",
+    "tags": ["vlan", "configuration", "switches", "networking"],
+    "related_articles": ["1633639132343299"],
+    "related_videos": [],
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the default VLAN ID on Cisco switches?",
+        "type": "multiple_choice",
+        "options": ["VLAN 0", "VLAN 1", "VLAN 10", "VLAN 100"],
+        "correct_answer": "VLAN 1",
+        "explanation": "VLAN 1 is the default VLAN on all Cisco switches and cannot be deleted.",
+        "points": 10
+      },
+      {
+        "id": "q2",
+        "question": "Which command is used to create a new VLAN in global configuration mode?",
+        "type": "multiple_choice",
+        "options": [
+          "create vlan [vlan-id]",
+          "vlan [vlan-id]",
+          "add vlan [vlan-id]",
+          "new vlan [vlan-id]"
+        ],
+        "correct_answer": "vlan [vlan-id]",
+        "explanation": "The 'vlan [vlan-id]' command in global configuration mode creates a new VLAN.",
+        "points": 10
+      },
+      {
+        "id": "q3",
+        "question": "What is the valid VLAN ID range for normal VLANs?",
+        "type": "multiple_choice",
+        "options": ["1-1005", "1-4094", "2-1001", "1-1024"],
+        "correct_answer": "1-1005",
+        "explanation": "Normal-range VLANs are numbered from 1 to 1005. Extended-range VLANs are 1006-4094.",
+        "points": 10
+      },
+      {
+        "id": "q4",
+        "question": "Which command assigns a switch port to a specific VLAN?",
+        "type": "multiple_choice",
+        "options": [
+          "switchport access vlan [vlan-id]",
+          "vlan assign [vlan-id]",
+          "set vlan [vlan-id]",
+          "port vlan [vlan-id]"
+        ],
+        "correct_answer": "switchport access vlan [vlan-id]",
+        "explanation": "The 'switchport access vlan [vlan-id]' command assigns an access port to a VLAN.",
+        "points": 10
+      },
+      {
+        "id": "q5",
+        "question": "What does a trunk port do?",
+        "type": "multiple_choice",
+        "options": [
+          "Connects to end devices",
+          "Carries traffic for multiple VLANs",
+          "Only carries management traffic",
+          "Blocks all VLAN traffic"
+        ],
+        "correct_answer": "Carries traffic for multiple VLANs",
+        "explanation": "A trunk port carries traffic for multiple VLANs between switches or to routers.",
+        "points": 10
+      }
+    ],
+    "passing_score": 70,
+    "time_limit_minutes": 15
+  },
+  {
+    "id": "snmp-security-quiz",
+    "title": "SNMP Security Best Practices Quiz",
+    "description": "Assess your understanding of SNMP security configuration",
+    "category": "Security",
+    "difficulty": "intermediate",
+    "tags": ["snmp", "security", "monitoring", "best practices"],
+    "related_articles": [],
+    "related_videos": [],
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which SNMP version provides encryption and authentication?",
+        "type": "multiple_choice",
+        "options": ["SNMPv1", "SNMPv2c", "SNMPv3", "All versions"],
+        "correct_answer": "SNMPv3",
+        "explanation": "SNMPv3 is the only version that provides encryption and authentication mechanisms.",
+        "points": 15
+      },
+      {
+        "id": "q2",
+        "question": "What is the main security weakness of SNMPv1 and SNMPv2c?",
+        "type": "multiple_choice",
+        "options": [
+          "No community strings",
+          "Community strings sent in clear text",
+          "No trap support",
+          "Cannot monitor devices"
+        ],
+        "correct_answer": "Community strings sent in clear text",
+        "explanation": "SNMPv1 and v2c send community strings unencrypted, making them vulnerable to interception.",
+        "points": 15
+      },
+      {
+        "id": "q3",
+        "question": "Which authentication protocol is recommended for SNMPv3?",
+        "type": "multiple_choice",
+        "options": ["MD5", "SHA", "Both are acceptable", "None needed"],
+        "correct_answer": "SHA",
+        "explanation": "SHA is cryptographically stronger than MD5 and is the recommended authentication protocol for SNMPv3.",
+        "points": 15
+      },
+      {
+        "id": "q4",
+        "question": "What should you avoid when naming SNMP community strings?",
+        "type": "multiple_choice",
+        "options": [
+          "Using default strings like 'public' and 'private'",
+          "Using alphanumeric characters",
+          "Using long strings",
+          "Using multiple communities"
+        ],
+        "correct_answer": "Using default strings like 'public' and 'private'",
+        "explanation": "Default community strings are well-known and should never be used in production environments.",
+        "points": 15
+      }
+    ],
+    "passing_score": 75,
+    "time_limit_minutes": 10
+  },
+  {
+    "id": "wireless-troubleshooting-quiz",
+    "title": "Wireless Network Troubleshooting Quiz",
+    "description": "Test your wireless troubleshooting skills",
+    "category": "Troubleshooting",
+    "difficulty": "advanced",
+    "tags": ["wireless", "wifi", "troubleshooting", "access points"],
+    "related_articles": [],
+    "related_videos": [],
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the most common cause of wireless interference in the 2.4 GHz band?",
+        "type": "multiple_choice",
+        "options": [
+          "Microwave ovens and Bluetooth devices",
+          "Ethernet cables",
+          "Power supplies",
+          "Fiber optic cables"
+        ],
+        "correct_answer": "Microwave ovens and Bluetooth devices",
+        "explanation": "The 2.4 GHz band is shared with many devices including microwaves, Bluetooth, and cordless phones.",
+        "points": 20
+      },
+      {
+        "id": "q2",
+        "question": "Which tool is best for identifying channel overlap issues?",
+        "type": "multiple_choice",
+        "options": [
+          "Ping test",
+          "WiFi analyzer/scanner",
+          "Traceroute",
+          "Bandwidth test"
+        ],
+        "correct_answer": "WiFi analyzer/scanner",
+        "explanation": "WiFi analyzers can show channel usage, overlap, and interference from nearby networks.",
+        "points": 20
+      },
+      {
+        "id": "q3",
+        "question": "What is the recommended approach for 5 GHz channel planning?",
+        "type": "multiple_choice",
+        "options": [
+          "Use overlapping channels",
+          "Use non-overlapping channels with proper spacing",
+          "Always use DFS channels",
+          "Use only channel 36"
+        ],
+        "correct_answer": "Use non-overlapping channels with proper spacing",
+        "explanation": "5 GHz has many non-overlapping channels; proper planning avoids interference.",
+        "points": 20
+      }
+    ],
+    "passing_score": 80,
+    "time_limit_minutes": 12
+  }
+]

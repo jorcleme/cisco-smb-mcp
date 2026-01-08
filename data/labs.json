@@ -1,0 +1,262 @@
+[
+  {
+    "id": "vlan-config-lab",
+    "title": "VLAN Configuration Hands-On Lab",
+    "description": "Configure VLANs on a Cisco Business switch using CLI commands",
+    "category": "Configuration",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 30,
+    "tags": ["vlan", "configuration", "cli", "hands-on"],
+    "prerequisites": ["Basic CLI navigation", "Access to switch console"],
+    "related_articles": ["1633639132343299"],
+    "related_videos": [],
+    "related_quizzes": ["vlan-basics-quiz"],
+    "objectives": [
+      "Create multiple VLANs",
+      "Assign switch ports to VLANs",
+      "Configure trunk ports",
+      "Verify VLAN configuration"
+    ],
+    "equipment_required": [
+      {
+        "device": "Cisco Business CBS220 Switch",
+        "quantity": 1,
+        "alternatives": ["CBS250", "CBS350"]
+      },
+      {
+        "device": "Console cable",
+        "quantity": 1,
+        "alternatives": []
+      },
+      {
+        "device": "PC workstation",
+        "quantity": 2,
+        "alternatives": []
+      }
+    ],
+    "topology": {
+      "description": "Two PCs connected to switch ports, switch configured with multiple VLANs",
+      "diagram_url": null
+    },
+    "steps": [
+      {
+        "step_number": 1,
+        "title": "Connect to Switch Console",
+        "description": "Connect your PC to the switch console port using the console cable",
+        "commands": [],
+        "expected_output": "Switch console prompt should appear",
+        "verification": "You should see the switch hostname prompt",
+        "hints": [
+          "Use terminal emulator like PuTTY or SecureCRT",
+          "Baud rate: 9600"
+        ]
+      },
+      {
+        "step_number": 2,
+        "title": "Enter Privileged EXEC Mode",
+        "description": "Enter enable mode to access privileged commands",
+        "commands": ["enable"],
+        "expected_output": "Switch#",
+        "verification": "Prompt changes from > to #",
+        "hints": ["Default enable password may not be set"]
+      },
+      {
+        "step_number": 3,
+        "title": "Enter Global Configuration Mode",
+        "description": "Enter configuration mode to make changes",
+        "commands": ["configure terminal"],
+        "expected_output": "Switch(config)#",
+        "verification": "Prompt shows (config)",
+        "hints": ["You can abbreviate to 'conf t'"]
+      },
+      {
+        "step_number": 4,
+        "title": "Create VLAN 10",
+        "description": "Create VLAN 10 for Sales department",
+        "commands": ["vlan 10", "name Sales", "exit"],
+        "expected_output": "VLAN 10 created and named",
+        "verification": "Use 'show vlan' to verify",
+        "hints": ["VLAN names are case-sensitive"]
+      },
+      {
+        "step_number": 5,
+        "title": "Create VLAN 20",
+        "description": "Create VLAN 20 for Engineering department",
+        "commands": ["vlan 20", "name Engineering", "exit"],
+        "expected_output": "VLAN 20 created and named",
+        "verification": "Use 'show vlan' to verify",
+        "hints": []
+      },
+      {
+        "step_number": 6,
+        "title": "Assign Port to VLAN 10",
+        "description": "Configure interface GigabitEthernet1/0/1 as access port in VLAN 10",
+        "commands": [
+          "interface gigabitethernet1/0/1",
+          "switchport mode access",
+          "switchport access vlan 10",
+          "exit"
+        ],
+        "expected_output": "Port assigned to VLAN 10",
+        "verification": "Use 'show vlan id 10' to verify port assignment",
+        "hints": ["Interface name may vary by model"]
+      },
+      {
+        "step_number": 7,
+        "title": "Assign Port to VLAN 20",
+        "description": "Configure interface GigabitEthernet1/0/2 as access port in VLAN 20",
+        "commands": [
+          "interface gigabitethernet1/0/2",
+          "switchport mode access",
+          "switchport access vlan 20",
+          "exit"
+        ],
+        "expected_output": "Port assigned to VLAN 20",
+        "verification": "Use 'show vlan id 20' to verify port assignment",
+        "hints": []
+      },
+      {
+        "step_number": 8,
+        "title": "Save Configuration",
+        "description": "Save the running configuration to startup configuration",
+        "commands": ["end", "write memory"],
+        "expected_output": "Configuration saved successfully",
+        "verification": "System should confirm save operation",
+        "hints": ["Alternative command: 'copy running-config startup-config'"]
+      }
+    ],
+    "validation": {
+      "commands": [
+        "show vlan brief",
+        "show vlan id 10",
+        "show vlan id 20",
+        "show running-config"
+      ],
+      "expected_results": [
+        "VLAN 10 exists with name 'Sales'",
+        "VLAN 20 exists with name 'Engineering'",
+        "Port Gi1/0/1 is in VLAN 10",
+        "Port Gi1/0/2 is in VLAN 20"
+      ]
+    },
+    "troubleshooting": [
+      {
+        "issue": "VLAN not appearing in show vlan output",
+        "solution": "Verify VLAN was created in global config mode, not interface mode"
+      },
+      {
+        "issue": "Port not accepting VLAN assignment",
+        "solution": "Ensure port is configured as access port first with 'switchport mode access'"
+      }
+    ],
+    "completion_criteria": [
+      "Two VLANs created successfully",
+      "Ports assigned to correct VLANs",
+      "Configuration saved",
+      "Devices can communicate within same VLAN"
+    ]
+  },
+  {
+    "id": "snmp-monitoring-lab",
+    "title": "SNMP Monitoring Configuration Lab",
+    "description": "Configure SNMP v3 with authentication for secure monitoring",
+    "category": "Configuration",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 45,
+    "tags": ["snmp", "monitoring", "security", "hands-on"],
+    "prerequisites": [
+      "Understanding of SNMP concepts",
+      "Access to SNMP monitoring tool",
+      "CLI proficiency"
+    ],
+    "related_articles": [],
+    "related_videos": [],
+    "related_quizzes": ["snmp-security-quiz"],
+    "objectives": [
+      "Configure SNMPv3 users",
+      "Set up authentication and privacy",
+      "Configure SNMP traps",
+      "Test SNMP connectivity"
+    ],
+    "equipment_required": [
+      {
+        "device": "Cisco Business Switch",
+        "quantity": 1,
+        "alternatives": []
+      },
+      {
+        "device": "SNMP Manager Software",
+        "quantity": 1,
+        "alternatives": ["Net-SNMP", "PRTG", "SolarWinds"]
+      }
+    ],
+    "topology": {
+      "description": "Switch connected to management workstation running SNMP manager",
+      "diagram_url": null
+    },
+    "steps": [
+      {
+        "step_number": 1,
+        "title": "Enable SNMP",
+        "description": "Enable SNMP service on the switch",
+        "commands": ["configure terminal", "snmp-server enable"],
+        "expected_output": "SNMP service enabled",
+        "verification": "Service should be active",
+        "hints": []
+      },
+      {
+        "step_number": 2,
+        "title": "Create SNMPv3 User",
+        "description": "Create a secure SNMPv3 user with authentication",
+        "commands": [
+          "snmp-server user monitor1 auth sha Auth123Pass priv aes128 Priv123Pass"
+        ],
+        "expected_output": "User created successfully",
+        "verification": "Use 'show snmp user' to verify",
+        "hints": ["Use strong passwords in production"]
+      },
+      {
+        "step_number": 3,
+        "title": "Configure SNMP Trap Receiver",
+        "description": "Configure trap receiver for event notifications",
+        "commands": ["snmp-server host 192.168.1.100 version 3 monitor1"],
+        "expected_output": "Trap receiver configured",
+        "verification": "Traps should be sent to specified host",
+        "hints": ["Replace IP with your management station IP"]
+      },
+      {
+        "step_number": 4,
+        "title": "Test SNMP Connectivity",
+        "description": "Test SNMP polling from management station",
+        "commands": [],
+        "expected_output": "SNMP queries return device information",
+        "verification": "Management station receives SNMP responses",
+        "hints": ["Use snmpwalk or snmpget from management station"]
+      }
+    ],
+    "validation": {
+      "commands": ["show snmp", "show snmp user", "show snmp host"],
+      "expected_results": [
+        "SNMP service is enabled",
+        "SNMPv3 user exists with SHA auth",
+        "Trap receiver configured"
+      ]
+    },
+    "troubleshooting": [
+      {
+        "issue": "SNMP queries timing out",
+        "solution": "Verify firewall rules allow UDP port 161, check community/user credentials"
+      },
+      {
+        "issue": "No traps received",
+        "solution": "Verify trap receiver IP address, check UDP port 162 is open"
+      }
+    ],
+    "completion_criteria": [
+      "SNMPv3 user configured with authentication",
+      "SNMP queries successful from management station",
+      "Traps received at management station",
+      "Security best practices followed"
+    ]
+  }
+]

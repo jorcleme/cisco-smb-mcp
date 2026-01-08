@@ -1,0 +1,88 @@
+[
+  {
+    "id": "troubleshoot-network",
+    "name": "Network Troubleshooting Assistant",
+    "description": "Help diagnose and resolve common network connectivity issues on Cisco SMB devices",
+    "category": "Troubleshooting",
+    "tags": ["network", "connectivity", "diagnosis", "troubleshooting"],
+    "template": "I'm experiencing network connectivity issues with my {{device_model}}. The symptoms are: {{symptoms}}. Can you help me diagnose and fix the problem? Please provide step-by-step troubleshooting instructions."
+  },
+  {
+    "id": "configure-vlan",
+    "name": "VLAN Configuration Guide",
+    "description": "Step-by-step guidance for configuring VLANs on Cisco Business switches",
+    "category": "Configuration",
+    "tags": ["vlan", "configuration", "network segmentation", "switches"],
+    "template": "I need to configure VLANs on my {{switch_model}}. I want to create {{vlan_count}} VLANs for {{purpose}}. Please guide me through the configuration process including best practices."
+  },
+  {
+    "id": "security-hardening",
+    "name": "Security Hardening Checklist",
+    "description": "Comprehensive security hardening recommendations for Cisco SMB devices",
+    "category": "Security",
+    "tags": ["security", "hardening", "best practices", "compliance"],
+    "template": "I want to improve the security posture of my {{device_type}}. Please provide a security hardening checklist with specific configuration steps to protect against common vulnerabilities."
+  },
+  {
+    "id": "wireless-optimization",
+    "name": "Wireless Network Optimization",
+    "description": "Optimize wireless network performance and coverage for Cisco Business wireless access points",
+    "category": "Optimization",
+    "tags": [
+      "wireless",
+      "wifi",
+      "performance",
+      "optimization",
+      "access points"
+    ],
+    "template": "I'm experiencing {{issue_type}} with my Cisco Business wireless network using {{ap_model}}. The coverage area is {{area_size}} and I have approximately {{client_count}} devices. How can I optimize performance?"
+  },
+  {
+    "id": "firmware-upgrade",
+    "name": "Firmware Upgrade Procedure",
+    "description": "Safe firmware upgrade procedure with rollback instructions",
+    "category": "Maintenance",
+    "tags": ["firmware", "upgrade", "update", "maintenance"],
+    "template": "I need to upgrade the firmware on my {{device_model}} from version {{current_version}} to {{target_version}}. Please provide a detailed upgrade procedure including pre-upgrade checks, backup steps, and rollback instructions."
+  },
+  {
+    "id": "qos-configuration",
+    "name": "Quality of Service (QoS) Setup",
+    "description": "Configure QoS policies to prioritize critical traffic",
+    "category": "Configuration",
+    "tags": ["qos", "quality of service", "traffic prioritization", "voip"],
+    "template": "I need to configure QoS on my {{device_model}} to prioritize {{priority_traffic}} traffic. My network handles {{traffic_types}}. Please help me set up appropriate QoS policies."
+  },
+  {
+    "id": "port-mirroring",
+    "name": "Port Mirroring Configuration",
+    "description": "Set up port mirroring for traffic analysis and monitoring",
+    "category": "Configuration",
+    "tags": ["port mirroring", "span", "monitoring", "traffic analysis"],
+    "template": "I need to configure port mirroring on my {{switch_model}} to monitor traffic from {{source_ports}} to {{destination_port}} for {{purpose}}. Please guide me through the configuration."
+  },
+  {
+    "id": "backup-restore",
+    "name": "Configuration Backup and Restore",
+    "description": "Procedures for backing up and restoring device configurations",
+    "category": "Maintenance",
+    "tags": ["backup", "restore", "configuration", "disaster recovery"],
+    "template": "I need to {{action}} the configuration on my {{device_model}}. Please provide detailed steps for safely {{action}}ing the device configuration including validation procedures."
+  },
+  {
+    "id": "snmp-monitoring",
+    "name": "SNMP Monitoring Setup",
+    "description": "Configure SNMP for network monitoring and management",
+    "category": "Configuration",
+    "tags": ["snmp", "monitoring", "management", "alerting"],
+    "template": "I want to set up SNMP monitoring on my {{device_model}} to integrate with {{monitoring_tool}}. Please help me configure SNMP communities, traps, and MIBs for effective monitoring."
+  },
+  {
+    "id": "acl-security",
+    "name": "Access Control List (ACL) Configuration",
+    "description": "Create and manage ACLs for network access control",
+    "category": "Security",
+    "tags": ["acl", "access control", "security", "firewall"],
+    "template": "I need to configure ACLs on my {{device_model}} to {{security_goal}}. The requirements are: {{requirements}}. Please help me create appropriate ACL rules."
+  }
+]
