@@ -1,0 +1,22 @@
+{
+  "servers": {
+    "smb-test-server": {
+      "command": "node",
+      "args": ["server/dist/index.js"],
+      "env": {
+        "APPDATA": "C:\\Users\\jorcleme\\AppData\\Roaming",
+        "HOMEDRIVE": "C:",
+        "HOMEPATH": "\\Users\\jorcleme",
+        "LOCALAPPDATA": "C:\\Users\\jorcleme\\AppData\\Local",
+        "PATH": "C:\\Users\\jorcleme\\AppData\\Local\\npm-cache\\_npx\\5a9d879542beca3a\\node_modules\\.bin;C:\\Users\\jorcleme\\projects\\cisco-smb-mcp\\node_modules\\.bin;C:\\Users\\jorcleme\\projects\\node_modules\\.bin;C:\\Users\\jorcleme\\node_modules\\.bin;C:\\Users\\node_modules\\.bin;C:\\node_modules\\.bin;C:\\Users\\jorcleme\\AppData\\Local\\nvm\\v22.20.0\\node_modules\\npm\\node_modules\\@npmcli\\run-script\\lib\\node-gyp-bin;C:\\Users\\jorcleme\\projects\\cisco-smb-mcp\\node_modules\\.bin;C:\\Users\\jorcleme\\projects\\node_modules\\.bin;C:\\Users\\jorcleme\\node_modules\\.bin;C:\\Users\\node_modules\\.bin;C:\\node_modules\\.bin;C:\\Users\\jorcleme\\AppData\\Local\\nvm\\v22.20.0\\node_modules\\npm\\node_modules\\@npmcli\\run-script\\lib\\node-gyp-bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\jorcleme\\bin;C:\\Users\\jorcleme\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\jorcleme\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Users\\jorcleme\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Tools;C:\\Tools\\duo-sso.exe;C:\\Program Files\\Amazon\\AWSCLIV2;C:\\Program Files\\Git\\cmd;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Python\\Python312\\Scripts;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Python\\Python314\\Scripts;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Python\\Python314;C:\\Users\\jorcleme\\.local\\bin;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Python\\Python313\\Scripts;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\jorcleme\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\jorcleme\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\jorcleme\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Tools\\duo-sso.exe;C:\\Tools;C:\\Users\\jorcleme\\AppData\\Local\\Microsoft\\WinGet\\Packages\\SQLite.SQLite_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl;C:\\Users\\jorcleme\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand",
+        "PROCESSOR_ARCHITECTURE": "AMD64",
+        "SYSTEMDRIVE": "C:",
+        "SYSTEMROOT": "C:\\WINDOWS",
+        "TEMP": "C:\\Users\\jorcleme\\AppData\\Local\\Temp",
+        "USERNAME": "jorcleme",
+        "USERPROFILE": "C:\\Users\\jorcleme",
+        "PROGRAMFILES": "C:\\Program Files"
+      }
+    }
+  }
+}
